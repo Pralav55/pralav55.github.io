@@ -1,4 +1,3 @@
-import React from 'react'
 
 import { HomeIcon ,UserIcon, BriefcaseIcon, RectangleStackIcon, RectangleGroupIcon, BuildingOfficeIcon, EnvelopeIcon   } from '@heroicons/react/24/outline'
 

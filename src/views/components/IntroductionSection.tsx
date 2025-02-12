@@ -1,16 +1,16 @@
 import { HomeIcon } from "@heroicons/react/24/outline"
 
 const IntroductionSection = () => {
-	
+
   return (
-	<div className='introduction-section pt-20 pb-20 min-h-screen'>
+	<div className='introduction-section pt-20 pb-20 '>
 		<div className='custom-container m-auto max-w-6xl pr-16 pl-16'>
 			<div className="introduction-content relative max-w-2xl ml-auto">
 				<div className="section-header p-2 border-1 border-neutral-500 rounded-full w-fit flex gap-1 items-center mb-12">
 					<HomeIcon className='size-3 text-neutral-500'/>
 					<span className="text-xs text-neutral-500">Introduction</span>
 				</div>
-				<div className="text-7xl tracking-wid font-light mb-12">
+				<div className="text-7xl tracking-wide font-light mb-12">
 					<div>Hi! I am <span className="text-red-500">Pralav</span>,</div>
 					<div>Engineer, Innovator </div>
 					<div>and Entrepreneur.</div>

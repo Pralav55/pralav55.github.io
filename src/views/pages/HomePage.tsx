@@ -6,19 +6,19 @@ import IntroductionSection from "../components/IntroductionSection";
 import IconMenu from "../components/IconMenu";
 
 function HomePage() {
-  return (
-    <>
-      <div className="main-container">
-        <div className="inner-container">
-          <IconMenu />
-          <NavBar />
-          <HeroSection />
-          <IntroductionSection />
-          {/* <AboutSection /> */}
-        </div>
-      </div>
-    </>
-  );
+	return (
+		<>
+			<div className="main-container">
+				<div className="inner-container">
+					<IconMenu />
+					<NavBar />
+					<HeroSection />
+					<IntroductionSection />
+					{/* <AboutSection /> */}
+				</div>
+			</div>
+		</>
+	);
 }
 
 export default HomePage;

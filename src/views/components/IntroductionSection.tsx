@@ -3,7 +3,7 @@ import { HomeIcon } from "@heroicons/react/24/outline"
 const IntroductionSection = () => {
 
   return (
-	<div className='introduction-section pt-20 pb-20 '>
+	<section id='introduction' className='introduction-section pt-20 pb-20 '>
 		<div className='custom-container m-auto max-w-6xl pr-16 pl-16'>
 			<div className="introduction-content relative max-w-2xl ml-auto">
 				<div className="section-header p-2 border-1 border-neutral-500 rounded-full w-fit flex gap-1 items-center mb-12">
@@ -34,7 +34,7 @@ const IntroductionSection = () => {
 				</div>
 			</div>
 		</div>
-	</div>
+	</section>
   )
 }
 

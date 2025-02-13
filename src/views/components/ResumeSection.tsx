@@ -2,7 +2,7 @@ import { BriefcaseIcon } from "@heroicons/react/24/outline";
 
 const ResumeSection = () => {
   return (
-    <div className="resume-section pt-20 pb-20">
+    <section id="resume" className="resume-section pt-20 pb-20">
       <div className="custom-container m-auto max-w-6xl pr-16 pl-16">
         <div className="resume-content relative max-w-2xl ml-auto">
           <div className="section-header p-2 border-1 border-neutral-500 rounded-full w-fit flex gap-1 items-center mb-12">
@@ -16,16 +16,16 @@ const ResumeSection = () => {
             <ul
               aria-label="Changelog feed"
               role="feed"
-              className="relative flex flex-col gap-12 after:absolute after:top-2 after:bottom-2 after:border after:-translate-x-1/2 after:border-neutral-500 "
+              className="relative flex flex-col gap-12 after:absolute after:top-2 after:bottom-2 after:border-s after:-translate-x-1/2 after:border-neutral-500 "
             >
               <li
                 role="article"
-                className="relative pl-6 before:absolute before:z-10 before:left-0 before:top-2 before:h-2 before:w-2 before:-translate-x-1/2 before:rounded-full before:bg-neutral-500 before:ring-1 before:ring-neutral-500"
+                className="relative pl-6 before:absolute before:z-10 before:left-0 before:top-2 before:h-2 before:w-2 before:-translate-x-1/2 before:rounded-full before:bg-neutral-500 before:ring-1 before:ring-neutral-500 group hover:before:bg-red-500 hover:before:ring-red-500 before:transition-all before:duration-300 " 
               >
                 <div className="flex flex-col flex-1 gap-4">
                   <h4 className="text-lg font-medium text-red-500">
                     v1.2.6{" "}
-                    <span className="text-lg font-normal text-neutral-500">
+                    <span className="text-lg font-normal text-neutral-500 group-hover:text-red-500 transition-all duration-300">
                       {" "}
                       - 2023-02-08
                     </span>{" "}
@@ -37,12 +37,12 @@ const ResumeSection = () => {
               </li>
               <li
                 role="article"
-                className="relative pl-6 before:absolute before:z-10 before:left-0 before:top-2 before:h-2 before:w-2 before:-translate-x-1/2 before:rounded-full before:bg-neutral-500 before:ring-1 before:ring-neutral-500"
+                className="relative pl-6 before:absolute before:z-10 before:left-0 before:top-2 before:h-2 before:w-2 before:-translate-x-1/2 before:rounded-full before:bg-neutral-500 before:ring-1 before:ring-neutral-500 group hover:before:bg-red-500 hover:before:ring-red-500 before:transition-all before:duration-300 "
               >
                 <div className="flex flex-col flex-1 gap-4">
                   <h4 className="text-lg font-medium text-red-500">
                     v1.2.5{" "}
-                    <span className="text-lg font-normal text-neutral-500">
+                    <span className="text-lg font-normal text-neutral-500 group-hover:text-red-500 transition-all duration-300">
                       {" "}
                       - 2023-01-21
                     </span>{" "}
@@ -63,12 +63,12 @@ const ResumeSection = () => {
               </li>
               <li
                 role="article"
-                className="relative pl-6 before:absolute before:z-10 before:left-0 before:top-2 before:h-2 before:w-2 before:-translate-x-1/2 before:rounded-full before:bg-neutral-500 before:ring-1 before:ring-neutral-500"
+                className="relative pl-6 before:absolute before:z-10 before:left-0 before:top-2 before:h-2 before:w-2 before:-translate-x-1/2 before:rounded-full before:bg-neutral-500 before:ring-1 before:ring-neutral-500 group hover:before:bg-red-500 hover:before:ring-red-500 before:transition-all before:duration-300 "
               >
                 <div className="flex flex-col flex-1 gap-4">
                   <h4 className="text-lg font-medium text-red-500">
                     v1.2.4{" "}
-                    <span className="text-lg font-normal text-neutral-500">
+                    <span className="text-lg font-normal text-neutral-500 group-hover:text-red-500 transition-all duration-300">
                       {" "}
                       - 2023-01-18
                     </span>{" "}
@@ -90,7 +90,7 @@ const ResumeSection = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

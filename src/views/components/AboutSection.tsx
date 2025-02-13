@@ -2,7 +2,7 @@ import { UserIcon } from "@heroicons/react/24/outline";
 
 const AboutSection = () => {
   return (
-    <div className="about-section pt-20 pb-20">
+    <section id='about' className="about-section pt-20 pb-20">
       <div className="custom-container m-auto max-w-6xl pr-16 pl-16">
         <div className="about-content relative max-w-2xl ml-auto">
           <div className="section-header p-2 border-1 border-neutral-500 rounded-full w-fit flex gap-1 items-center mb-12">
@@ -19,7 +19,7 @@ const AboutSection = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

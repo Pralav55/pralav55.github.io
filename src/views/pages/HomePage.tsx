@@ -5,6 +5,8 @@ import IntroductionSection from "../components/IntroductionSection";
 import AboutSection from "../components/AboutSection";
 import IconMenu from "../components/IconMenu";
 import ResumeSection from "../components/ResumeSection";
+import ServicesSection from "../components/ServicesSection";
+import SkillsSection from "../components/SkillsSection";
 
 function HomePage() {
 	return (
@@ -17,6 +19,8 @@ function HomePage() {
 					<IntroductionSection />
 					<AboutSection />
 					<ResumeSection />
+					<ServicesSection />
+					<SkillsSection />
 				</div>
 			</div>
 		</>

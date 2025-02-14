@@ -7,6 +7,7 @@ import IconMenu from "../components/IconMenu";
 import ResumeSection from "../components/ResumeSection";
 import ServicesSection from "../components/ServicesSection";
 import SkillsSection from "../components/SkillsSection";
+import ProjectsSection from "../components/ProjectsSection";
 
 function HomePage() {
 	return (
@@ -21,6 +22,7 @@ function HomePage() {
 					<ResumeSection />
 					<ServicesSection />
 					<SkillsSection />
+					<ProjectsSection />
 				</div>
 			</div>
 		</>

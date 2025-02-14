@@ -4,7 +4,7 @@ import {
   BriefcaseIcon,
   RectangleStackIcon,
   RectangleGroupIcon,
-  // BuildingOfficeIcon,
+  BuildingOfficeIcon,
   // EnvelopeIcon,
 } from "@heroicons/react/24/outline";
 import { useState, useEffect } from "react";
@@ -43,7 +43,7 @@ const NavBar = () => {
         duration={700}
         spy={true}
         className={`${
-          activeSection === 'introduction' ? "*:!text-red-500" : ""
+          activeSection === "introduction" ? "*:!text-red-500" : ""
         }`}
         ignoreCancelEvents={false}
       >
@@ -56,9 +56,7 @@ const NavBar = () => {
         smooth={true}
         duration={700}
         spy={true}
-        className={`${
-          activeSection === 'about' ? "*:!text-red-500" : ""
-        }`}
+        className={`${activeSection === "about" ? "*:!text-red-500" : ""}`}
         ignoreCancelEvents={false}
       >
         <UserIcon className="navbar-icon" />
@@ -70,9 +68,7 @@ const NavBar = () => {
         smooth={true}
         duration={700}
         spy={true}
-        className={`${
-          activeSection === 'resume' ? "*:!text-red-500" : ""
-        }`}
+        className={`${activeSection === "resume" ? "*:!text-red-500" : ""}`}
         ignoreCancelEvents={false}
       >
         <BriefcaseIcon className="navbar-icon" />
@@ -84,9 +80,7 @@ const NavBar = () => {
         smooth={true}
         duration={700}
         spy={true}
-        className={`${
-          activeSection === 'services' ? "*:!text-red-500" : ""
-        }`}
+        className={`${activeSection === "services" ? "*:!text-red-500" : ""}`}
         ignoreCancelEvents={false}
       >
         <RectangleStackIcon className="navbar-icon" />
@@ -98,18 +92,26 @@ const NavBar = () => {
         smooth={true}
         duration={700}
         spy={true}
-        className={`${
-          activeSection === 'skills' ? "*:!text-red-500" : ""
-        }`} 
+        className={`${activeSection === "skills" ? "*:!text-red-500" : ""}`}
         ignoreCancelEvents={false}
       >
-          
         <RectangleGroupIcon className="navbar-icon" />
       </ScrollLink>
-      {/* <ScrollLink key="home" to="home" delay={200} smooth={true} duration={700} spy={true} activeClass="!text-red-500">
+      <ScrollLink
+        key="projects"
+        to="projects"
+        delay={200}
+        smooth={true}
+        duration={700}
+        spy={true}
+        className={`${
+          activeSection === "projects" ? "*:!text-red-500" : ""
+        }`}
+        ignoreCancelEvents={false}
+      >
         <BuildingOfficeIcon className="navbar-icon" />
       </ScrollLink>
-      <ScrollLink key="home" to="home" delay={200} smooth={true} duration={700} spy={true} activeClass="!text-red-500">
+      {/* <ScrollLink key="home" to="home" delay={200} smooth={true} duration={700} spy={true} activeClass="!text-red-500">
         <EnvelopeIcon className="navbar-icon" />
       </ScrollLink> */}
     </div>

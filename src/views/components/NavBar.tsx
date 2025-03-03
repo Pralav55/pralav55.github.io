@@ -34,7 +34,7 @@ const NavBar = () => {
   }, []);
 
   return (
-    <div className="navbar fixed top-1/2 -translate-y-1/2 right-12 border-1 border-neutral-500 rounded-full flex flex-col items-center gap-6 pt-6 pb-6 text-center w-[55px]">
+    <div className="navbar hidden xl:fixed top-1/2 -translate-y-1/2 right-12 border-1 border-neutral-500 rounded-full xl:flex flex-col items-center gap-6 pt-6 pb-6 text-center w-[55px]">
       <ScrollLink
         key="introduction"
         to="introduction"

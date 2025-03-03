@@ -2,7 +2,7 @@ import pralav from "../../assets/pralav.png";
 
 const HeroSection = () => {
   return (
-    <div className="hero-section fixed border-1 border-neutral-500 rounded-[30px] left-[20px] top-[50%] -translate-y-1/2 p-8 w-sm">
+    <div className="hero-section mr-auto ml-auto max-xl:mt-16 w-sm md:w-md lg:w-lg xl:fixed border-1 border-neutral-500 rounded-[30px] xl:left-[20px] xl:top-[50%] xl:-translate-y-1/2 p-8 xl:w-sm">
       <div className="mb-[30px] flex justify-between items-start">
         <div className="text-4xl font-bold">Pralav</div>
         <div className="text-sm text-right w-[100px]">Lead Engineer Mignited</div>

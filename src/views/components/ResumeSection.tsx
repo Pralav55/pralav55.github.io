@@ -1,46 +1,39 @@
 import { BriefcaseIcon } from "@heroicons/react/24/outline";
-import { useState } from "react";
-import { motion, useScroll, useMotionValueEvent } from "motion/react";
 
-const ResumeSection = () => {
+import { motion, MotionConfig } from "motion/react";
 
 
-  const { scrollY } = useScroll();
-  const [scrollDirection, setScrollDirection] = useState("down");
+interface ResumeSectionProps {
+  scrollDirection: string;
+}
 
-  useMotionValueEvent(scrollY, "change", (current) => {
-    const previous = scrollY.getPrevious();
-    if (previous !== undefined) {
-      const diff = current - previous;
-      setScrollDirection(diff > 0 ? "down" : "up");
-    }
-  });
+const ResumeSection = ({scrollDirection = "down"} : ResumeSectionProps) => {
+
 
   return (
-    <section id="resume" className="resume-section pt-20 pb-20">
+    <section id="resume" className="resume-section pt-20 pb-20 overflow-x-hidden">
       <div className="custom-container m-auto max-w-6xl pr-16 pl-16">
-        <div className="resume-content relative max-w-2xl ml-auto">
+        <div className="resume-content relative max-w-2xl ml-auto max-xl:mr-auto">
+        <MotionConfig
+              transition={{ duration: 0.7, easing: [0.17, 0.55, 0.55, 1] }}
+            >
           <motion.div initial={{ y: scrollDirection === "down" ? 0 : 100 }}
       whileInView={{ y: 0 }}
-      transition={{ duration: 0.7, easing: [0.17, 0.55, 0.55, 1] }}
-      exit={{ y: scrollDirection === "down" ? 0 : 100 }}
       className="section-header p-2 border-1 border-neutral-500 rounded-full w-fit flex gap-1 items-center mb-12">
             <BriefcaseIcon className="size-3 text-neutral-500" />
             <span className="text-xs text-neutral-500">Resume</span>
           </motion.div>
           <motion.div initial={{ y: scrollDirection === "down" ? 0 : 100 }}
       whileInView={{ y: 0 }}
-      transition={{ duration: 0.7, easing: [0.17, 0.55, 0.55, 1] }}
-      exit={{ y: scrollDirection === "down" ? 0 : 100 }}
       className="text-5xl tracking-wide font-light mb-10">
             Education & <span className="text-red-500">Experience</span>
           </motion.div>
+          </MotionConfig>
           <div className="">
             <motion.ul
               initial={{ x: scrollDirection === "down" ? 0 : 200 }}
               whileInView={{ x: 0 }}
               transition={{ duration: 0.7, easing: [0.17, 0.55, 0.55, 1] }}
-              exit={{ x: scrollDirection === "down" ? 0 : 200 }}
               aria-label="Changelog feed"
               role="feed"
               className="relative flex flex-col gap-12 after:absolute after:top-2 after:bottom-2 after:border-s after:-translate-x-1/2 after:border-neutral-500 "

@@ -5,12 +5,13 @@ import LoadingPage from "./views/pages/LoadingPage";
 import { AnimatePresence, motion } from "motion/react";
 
 function App() {
+  //https://wpriverthemes.com/drake/#
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 3000);
   }, []);
 
   return (

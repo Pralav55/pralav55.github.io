@@ -8,7 +8,7 @@ interface ResumeSectionProps {
 }
 
 const ResumeSection = ({scrollDirection = "down"} : ResumeSectionProps) => {
-
+  //https://wind-ui.com/components/feeds/
 
   return (
     <section id="resume" className="resume-section pt-20 pb-20 overflow-x-hidden">

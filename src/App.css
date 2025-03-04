@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 .navbar-icon {
-  @apply cursor-pointer text-neutral-500 size-5 hover:text-red-500 transition-all duration-300;
+  @apply cursor-pointer text-neutral-500 size-5 hover:text-red-500 group-hover:text-red-500 transition-all duration-300;
 }
 
 .icon-menu-button {

@@ -1,46 +1,50 @@
 import pralav from "../../assets/pralav.png";
-import {motion} from "motion/react"
+import { motion } from "motion/react";
 import { useState } from "react";
 
 interface HeroSectionProps {
   scrollDirection: string;
 }
 
-const HeroSection = ({scrollDirection}: HeroSectionProps) => {
-
+const HeroSection = ({ scrollDirection }: HeroSectionProps) => {
   const [imageLoading, setImageLoading] = useState(true);
 
   const onImageLoaded = () => {
-    console.log("image loaded")
+    console.log("image loaded");
     setImageLoading(false);
-  }
-
+  };
 
   return (
-    <motion.div 
-    transition={{ duration: 2, easing: [0.17, 0.55, 0.55, 1] }}
-    initial={{ opacity: scrollDirection === "down" ? 1 : 0 }}
-    whileInView={{ opacity: 1 }}
-    
-    className="hero-section mr-auto ml-auto max-xl:mt-16 w-sm md:w-md lg:w-lg xl:fixed border-1 border-neutral-500 rounded-[30px] xl:left-[20px] xl:top-[50%] xl:-translate-y-1/2 p-8 xl:w-sm">
+    <motion.div
+      transition={{ duration: 2, easing: [0.17, 0.55, 0.55, 1] }}
+      initial={{ opacity: scrollDirection === "down" ? 1 : 0 }}
+      whileInView={{ opacity: 1 }}
+      className="hero-section mr-auto ml-auto max-xl:mt-16 w-sm md:w-md lg:w-lg xl:fixed border-1 border-neutral-500 rounded-[30px] xl:left-[20px] xl:top-[50%] xl:-translate-y-1/2 p-8 xl:w-sm"
+    >
       <div className="mb-[30px] flex justify-between items-start">
         <div className="text-4xl font-bold">Pralav</div>
-        <div className="text-sm text-right w-[100px]">Lead Engineer Mignited</div>
+        <div className="text-sm text-right w-[100px]">
+          Lead Engineer Mignited
+        </div>
       </div>
       <figure className="relative mr-8 ml-8 mb-[30px] transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0">
         <a href="#">
-        <motion.img
-        initial={{ height: "16rem", opacity: 0 }}
-        // style={{ height: imageLoading ? "6rem" : "auto" }}
-        animate={{
-          height: imageLoading ? "16rem" : "auto",
-          opacity: imageLoading ? 0 : 1
-        }}
-        transition={
-          { height: { delay: 0, duration: 0.4 } ,
-           opacity: { delay: 0.5, duration: 0.4 } }
-        }
-        className="rounded-[30px]" onLoad={onImageLoaded} src={pralav} alt="Pralav" />
+          <motion.img
+            initial={{ height: "16rem", opacity: 0 }}
+            // style={{ height: imageLoading ? "6rem" : "auto" }}
+            animate={{
+              height: imageLoading ? "16rem" : "auto",
+              opacity: imageLoading ? 0 : 1,
+            }}
+            transition={{
+              height: { delay: 0, duration: 0.4 },
+              opacity: { delay: 0.5, duration: 0.4 },
+            }}
+            className="rounded-[30px]"
+            onLoad={onImageLoaded}
+            src={pralav}
+            alt="Pralav"
+          />
         </a>
       </figure>
       <div className="mb-[8px] text-xl font-medium w-full text-center">
@@ -51,10 +55,13 @@ const HeroSection = ({scrollDirection}: HeroSectionProps) => {
       </div>
       <div className="mr-auto flex gap-4 justify-center items-center ml-auto mb-[30px] text-center">
         <div className="border-1 border-neutral-500 rounded-full p-3 cursor-pointer hover:border-red-500 transition-all duration-300 hover:*:fill-red-500">
-				<svg className="size-5 fill-neutral-500 transition-all duration-300"
+          <svg
+            className="size-5 fill-neutral-500 transition-all duration-300"
             xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 448 512">
-				<path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+            viewBox="0 0 448 512"
+          >
+            <path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+          </svg>
         </div>
         <div className="border-1 border-neutral-500 rounded-full p-3 cursor-pointer hover:border-red-500 transition-all duration-300 hover:*:fill-red-500">
           <svg
@@ -88,13 +95,13 @@ const HeroSection = ({scrollDirection}: HeroSectionProps) => {
         href="/"
         className="bg-red-500 border-2 border-red-500 text-black rounded-full p-3 text-center w-full cursor-pointer hover:bg-transparent hover:text-red-500 hover:*:fill-red-500 transition-all duration-300 flex justify-center items-center gap-2 font-medium "
       >
-				<svg
-            className="size-3 fill-black transition-all duration-300"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 512 512"
-          >
-            <path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z" />
-          </svg>
+        <svg
+          className="size-3 fill-black transition-all duration-300"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512"
+        >
+          <path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z" />
+        </svg>
         Contact Me!
       </a>
     </motion.div>

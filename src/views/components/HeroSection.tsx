@@ -1,8 +1,17 @@
 import pralav from "../../assets/pralav.png";
+import {motion} from "motion/react"
 
-const HeroSection = () => {
+interface HeroSectionProps {
+  scrollDirection: string;
+}
+
+const HeroSection = ({scrollDirection}: HeroSectionProps) => {
   return (
-    <div className="hero-section mr-auto ml-auto max-xl:mt-16 w-sm md:w-md lg:w-lg xl:fixed border-1 border-neutral-500 rounded-[30px] xl:left-[20px] xl:top-[50%] xl:-translate-y-1/2 p-8 xl:w-sm">
+    <motion.div 
+    transition={{ duration: 2, easing: [0.17, 0.55, 0.55, 1] }}
+    initial={{ opacity: scrollDirection === "down" ? 1 : 0 }}
+    whileInView={{ opacity: 1 }}
+    className="hero-section mr-auto ml-auto max-xl:mt-16 w-sm md:w-md lg:w-lg xl:fixed border-1 border-neutral-500 rounded-[30px] xl:left-[20px] xl:top-[50%] xl:-translate-y-1/2 p-8 xl:w-sm">
       <div className="mb-[30px] flex justify-between items-start">
         <div className="text-4xl font-bold">Pralav</div>
         <div className="text-sm text-right w-[100px]">Lead Engineer Mignited</div>
@@ -66,7 +75,7 @@ const HeroSection = () => {
           </svg>
         Contact Me!
       </a>
-    </div>
+    </motion.div>
   );
 };
 

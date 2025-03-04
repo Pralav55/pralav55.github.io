@@ -5,7 +5,7 @@
 }
 
 .icon-menu-button {
-  @apply absolute right-12 top-12 cursor-pointer flex flex-col gap-1 items-center justify-center w-[55px] h-[55px] rounded-full border-1 border-neutral-500 hover:border-red-500 transition-all duration-300 hover:*:bg-red-500;
+  @apply fixed right-12 top-12 z-10 cursor-pointer flex flex-col gap-1 items-center justify-center w-[55px] h-[55px] rounded-full border-1 border-neutral-500 hover:border-red-500 transition-all duration-300 hover:*:bg-red-500;
   
 
 }

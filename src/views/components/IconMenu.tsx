@@ -64,7 +64,7 @@ const IconMenu = () => {
         } duration-300 `}
         aria-label="Sidebar"
       >
-        <div className="h-full pt-16 overflow-y-auto dark:bg-gray-950">
+        <div className="h-full pt-16 overflow-y-auto dark:bg-black]">
           <ul className="menu-wrapper w-[46%] m-auto relative">
             <XMarkIcon
               className="absolute top-2 right-2 size-4 text-neutral-500 hover:text-red-500 transition-colors duration-300 cursor-pointer"

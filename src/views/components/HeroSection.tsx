@@ -1,7 +1,6 @@
 import pralav from "../../assets/pralav.png";
-import {AnimatePresence, motion} from "motion/react"
-import { image } from "motion/react-client";
-import { useEffect, useState } from "react";
+import {motion} from "motion/react"
+import { useState } from "react";
 
 interface HeroSectionProps {
   scrollDirection: string;

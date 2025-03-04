@@ -9,7 +9,6 @@ import ResumeSection from "../components/ResumeSection";
 import ServicesSection from "../components/ServicesSection";
 import SkillsSection from "../components/SkillsSection";
 import ProjectsSection from "../components/ProjectsSection";
-import { AnimatePresence } from "motion/react";
 
 function HomePage() {
 

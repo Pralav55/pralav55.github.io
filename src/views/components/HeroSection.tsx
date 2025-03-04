@@ -18,7 +18,7 @@ const HeroSection = ({scrollDirection}: HeroSectionProps) => {
       </div>
       <figure className="relative mr-8 ml-8 mb-[30px] transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0">
         <a href="#">
-          <img className="rounded-[30px]" src={pralav} alt="Pralav" />
+          <img className="rounded-[30px]" loading="lazy" src={pralav} alt="Pralav" />
         </a>
       </figure>
       <div className="mb-[8px] text-xl font-medium w-full text-center">

@@ -22,7 +22,7 @@ function HomePage() {
           <NavBar />
 
           <HeroSection scrollDirection={scrollDirection}/>
-          <IntroductionSection />
+          <IntroductionSection scrollDirection={scrollDirection}/>
           <AboutSection scrollDirection={scrollDirection} />
           <ResumeSection scrollDirection={scrollDirection} />
           <ServicesSection scrollDirection={scrollDirection} />

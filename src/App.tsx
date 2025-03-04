@@ -26,8 +26,7 @@ function App() {
             <LoadingPage />
           </motion.div>
         )}
-      </AnimatePresence>
-      <AnimatePresence>
+
         {!loading && (
           <motion.div
           key="modal"

@@ -1,11 +1,18 @@
 import { HomeIcon } from "@heroicons/react/24/outline"
+import {motion}  from "motion/react"
 
+interface IntroductionSectionProps {
+	scrollDirection: string;
+  }
 
-
-const IntroductionSection= () => {
+const IntroductionSection= ({scrollDirection}: IntroductionSectionProps) => {
 
   return (
-	<section id='introduction' className='introduction-section pt-20 pb-20 '>
+	<motion.section
+	transition={{ duration: 2, easing: [0.17, 0.55, 0.55, 1] }}
+    initial={{ opacity: scrollDirection === "down" ? 1 : 0 }}
+    whileInView={{ opacity: 1 }}
+	id='introduction' className='introduction-section pt-20 pb-20 '>
 		<div className='custom-container m-auto max-w-6xl pr-16 pl-16'>
 			<div className="introduction-content relative max-w-2xl ml-auto max-xl:mr-auto">
 				<div className="section-header p-2 border-1 border-neutral-500 rounded-full w-fit flex gap-1 items-center mb-12">
@@ -36,7 +43,7 @@ const IntroductionSection= () => {
 				</div>
 			</div>
 		</div>
-	</section>
+	</motion.section>
   )
 }
 

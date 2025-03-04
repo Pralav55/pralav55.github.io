@@ -1,16 +1,28 @@
 import pralav from "../../assets/pralav.png";
-import {motion} from "motion/react"
+import {AnimatePresence, motion} from "motion/react"
+import { image } from "motion/react-client";
+import { useEffect, useState } from "react";
 
 interface HeroSectionProps {
   scrollDirection: string;
 }
 
 const HeroSection = ({scrollDirection}: HeroSectionProps) => {
+
+  const [imageLoading, setImageLoading] = useState(true);
+
+  const onImageLoaded = () => {
+    console.log("image loaded")
+    setImageLoading(false);
+  }
+
+
   return (
     <motion.div 
     transition={{ duration: 2, easing: [0.17, 0.55, 0.55, 1] }}
     initial={{ opacity: scrollDirection === "down" ? 1 : 0 }}
     whileInView={{ opacity: 1 }}
+    
     className="hero-section mr-auto ml-auto max-xl:mt-16 w-sm md:w-md lg:w-lg xl:fixed border-1 border-neutral-500 rounded-[30px] xl:left-[20px] xl:top-[50%] xl:-translate-y-1/2 p-8 xl:w-sm">
       <div className="mb-[30px] flex justify-between items-start">
         <div className="text-4xl font-bold">Pralav</div>
@@ -18,7 +30,18 @@ const HeroSection = ({scrollDirection}: HeroSectionProps) => {
       </div>
       <figure className="relative mr-8 ml-8 mb-[30px] transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0">
         <a href="#">
-          <img className="rounded-[30px]" loading="lazy" src={pralav} alt="Pralav" />
+        <motion.img
+        initial={{ height: "16rem", opacity: 0 }}
+        // style={{ height: imageLoading ? "6rem" : "auto" }}
+        animate={{
+          height: imageLoading ? "16rem" : "auto",
+          opacity: imageLoading ? 0 : 1
+        }}
+        transition={
+          { height: { delay: 0, duration: 0.4 } ,
+           opacity: { delay: 0.5, duration: 0.4 } }
+        }
+        className="rounded-[30px]" onLoad={onImageLoaded} src={pralav} alt="Pralav" />
         </a>
       </figure>
       <div className="mb-[8px] text-xl font-medium w-full text-center">

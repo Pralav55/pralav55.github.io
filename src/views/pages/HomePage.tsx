@@ -1,7 +1,3 @@
-// import { useState } from "react";
-// import {useScroll, useMotionValueEvent } from "motion/react";
-
-// import {useScrollDirectionHook} from "@/customhooks/useScrollDirectionHook";
 import { useScrollDirectionHook } from "@/customhooks/useScrollDirectionHook";
 
 import HeroSection from "../components/HeroSection";
@@ -16,20 +12,8 @@ import ProjectsSection from "../components/ProjectsSection";
 import { AnimatePresence } from "motion/react";
 
 function HomePage() {
-  // const { scrollY } = useScroll();
-  // const [scrollDirection, setScrollDirection] = useState("down");
-  const scrollDirection = useScrollDirectionHook();
 
-  // useMotionValueEvent(scrollY, "change", (current) => {
-  //   const previous = scrollY.getPrevious();
-  //   if (previous !== undefined) {
-  //     const diff = current - previous;
-  //     setScrollDirection(diff > 0 ? "down" : "up");
-  //   console.log(scrollDirection);
-  //   }else{
-  //   setScrollDirection("down");
-  // }
-  // });
+  const scrollDirection = useScrollDirectionHook();
 
   return (
     <>
